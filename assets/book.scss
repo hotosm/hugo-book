@@ -18,7 +18,7 @@ body {
   color: $body-font-color;
   background: $body-background;
 
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: $body-font-weight;
 
   text-rendering: optimizeLegibility;
@@ -40,17 +40,125 @@ h5 {
 }
 
 a {
+  color:$hot-red;
   text-decoration: none;
-  color: $color-link;
-
-  &:visited {
-    color: $color-visited-link;
-  }
 }
+
+
 
 img {
   vertical-align: middle;
   max-width: 100%;
+}
+
+.header-nav {
+  display: flex;
+  height:64px;
+  color: $hot-red;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-nav__title {
+  margin-right:auto;
+}
+
+.search-icon {
+  width:40px;
+  height:40px;
+  display: block;
+  background-image: url(/svg/icon-search.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: left center;
+}
+
+.nav-container {
+display: flex;
+padding:12px;
+}
+
+#nav {
+  position: relative;
+  background-color: #FFF;
+}
+
+.nav-title{
+  min-height:40px;
+  display:inline-flex;
+  font-weight:bold;
+  margin-right:24px;
+  border:2px solid $hot-red;
+  border-radius:1px;
+  transition:background-color .3s ease;
+}
+
+#nav .nav-title span{
+  padding:9px 10px;
+  flex:0 1 auto;
+}
+
+#nav .nav-title:hover{
+  background-color:#f9e2e2;
+}
+
+#nav a {
+  color: $hot-red;
+  text-decoration: none;
+}
+
+#nav .nav-container {
+  padding: 12px;
+}
+
+#nav .nav-title .logo{
+  display:inline-block;
+  background-color:$hot-red;
+  padding-left:3px;padding-right:5px;
+}
+
+#nav .nav-title .logo img{
+    height:28px;
+    width:auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom:0px; 
+  left:0px; 
+  right:0px; 
+  align-items: center;
+  padding: 0px 15px;
+  height:45px;   
+}
+
+.container {
+  position:absolute;
+  left:0px; 
+  right:0px;
+  bottom:45px;
+  top:64px;
+  padding: 0 40px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.footer p {
+  display: flex;
+  font-size: 0.8125rem;
+  vertical-align: center;
+  margin:0;
+}
+
+.footer-logo{
+  width: 40px;
+  height: 24px;
 }
 
 aside nav ul {
@@ -64,10 +172,6 @@ aside nav ul {
 
   a {
     display: block;
-  }
-
-  a:hover {
-    opacity: .5;
   }
 
   ul {
@@ -85,8 +189,6 @@ ul.pagination {
 }
 
 .container {
-  min-width: $container-min-width;
-  max-width: $container-max-width;
   margin: 0 auto;
 }
 
@@ -95,22 +197,22 @@ ul.pagination {
 }
 
 .book-menu {
-  flex: 0 0 $menu-width;
+  flex: 1;
   font-size: $font-size-14;
+  overflow-y: scroll;
+
 
   nav {
-    width: $menu-width;
     padding: $padding-16;
-
-    @include fixed;
   }
 
   @include dark-links;
 }
 
 .book-page {
-  min-width: $body-min-width;
+  flex: 3;
   padding: $padding-16;
+  overflow-y: scroll; 
 }
 
 .book-header {
@@ -119,14 +221,13 @@ ul.pagination {
 }
 
 .book-toc {
-  flex: 0 0 $toc-width;
+  flex: 1;
   font-size: $font-size-12;
 
   nav {
     width: $toc-width;
     padding: $padding-16;
 
-    @include fixed;
   }
 
   nav > ul > li {

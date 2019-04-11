@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-{{- partial "docs/shared" -}}
+{{- partial "shared" -}}
 <html>
 
 <head>
-  {{ partial "docs/html-head" . }}
-  {{ partial "docs/inject/head" . }}
+  {{ partial "html-head" . }}
+  {{ partial "inject/head" . }}
 </head>
 
 <body>
@@ -12,7 +12,7 @@
       <h1>404 Not Found</h1>
   </main>
 
-  {{ partial "docs/inject/body" . }}
+  {{ partial "inject/body" . }}
   {{ template "_internal/google_analytics_async.html" . }}
 </body>
 

@@ -20,10 +20,10 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
-
+/*
 $color-link: #004ed0;
 $color-visited-link: #8440f1;
-
+*/
 $body-background: white;
 $body-font-color: $gray-800;
 $body-font-weight: 400;
@@ -41,3 +41,6 @@ $container-max-width: 80rem;
 
 $sm-breakpoint: $menu-width + $body-min-width;
 $md-breakpoint: $sm-breakpoint + $toc-width;
+
+
+$hot-red: #D73F3F;

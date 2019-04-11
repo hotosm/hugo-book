@@ -37,7 +37,7 @@
 
 {{ define "book-get-root-section" }}
 <!-- Complex logic to guess page title without .Title specified -->
-  {{ $bookSection := default "docs" .Site.Params.BookSection  }}
+  {{ $bookSection := default "*" .Site.Params.BookSection  }}
   {{ if eq $bookSection "*" }}
     {{ .Scratch.Set "BookSections" .Site.Sections }}
   {{ else }}

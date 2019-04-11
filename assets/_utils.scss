@@ -36,7 +36,7 @@
 
 @mixin fixed {
   position: fixed;
-  top: 0;
+  top: 60px;
   bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -47,7 +47,4 @@
     color: $nav-link-color;
   }
 
-  a.active {
-    color: $color-link;
-  }
 }

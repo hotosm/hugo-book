@@ -1,0 +1,10 @@
+<nav role="navigation">
+{{ partial "inject/menu-before" . }}
+{{ if .Site.Params.BookMenuBundle }}
+    {{ partial "menu-bundle" . }}
+{{ else }}
+    {{ partial "menu-filetree" . }}
+{{ end }}
+
+{{ partial "inject/menu-after" . }}
+</nav>

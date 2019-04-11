@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{{- partial "shared" -}}
+<html>
+
+<head>
+  {{ partial "html-head" . }}
+  {{ partial "inject/head" . }}
+</head>
+
+<body>
+  <header class="header-nav" id="nav">
+    <div class="nav-container">
+      <a class="nav-title with-logo" href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}">
+        <img class="logo" src="{{ .Site.BaseURL }}/svg/hot-logo-icon-white.svg" alt="humanitarian openstreetmap team logo">
+        <span>{{ .Site.Title }}</span>
+      </a>
+      <input type="checkbox" style="display: none" id="menu-control" />
+      <!-->div class="search-icon"></div>
+      <input type="text" name="search" id="search-input"-->
+    </div>
+  </header>
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      {{ partial "menu" . }}
+    </aside>
+
+    <div class="book-page">
+      {{ partial "mobile-header" . }}
+      {{ template "main" . }}
+      {{ partial "git-footer" . }}
+    </div>
+
+    {{ template "toc" . }}
+  </main>
+
+  {{ partial "inject/body" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+  <footer class="footer">
+
+    <p>Humanitarian OpenStreetMap Team is a 501(c)(3) not-for-profit organization and global community. Learn more about  <a href="https://www.openstreetmap.org/about">OpenStreetMap</a>.</p>
+    <a href="https://hotosm.org">
+      <img class="logo footer-logo" src="{{ .Site.BaseURL }}/svg/hot-logo-icon-red.svg" alt="humanitarian openstreetmap team logo">
+    </a>
+  </footer>
+  
+</body>
+
+</html>

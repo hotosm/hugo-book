@@ -11,5 +11,7 @@ features = []
 min_version = "0.43"
 
 [author]
-  name = "Alex Shpak"
-  homepage = "https://github.com/alex-shpak/"
+  original_author = "Alex Shpak"
+  name = "Humanitarian Openstreetmap"
+  original_homepage = "https://github.com/alex-shpak/"
+  homepage = "https://github.com/hostosm/hugo-book"
