@@ -1,5 +1,9 @@
 {{ define "main" }}
 <article class="markdown">
+  <div class="markdown-header">  <h1>{{ .Page.Title }}</h1>
+    <a href="/pdfs/{{ .File }}.pdf" class="pdf-download-link"> Download page as PDF  <div class="pdf-download-icon"></div></a></div>
+
+  
   {{- .Content -}}
 </article>
 {{ end }}

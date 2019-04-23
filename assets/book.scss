@@ -75,7 +75,7 @@ img {
 
 .nav-container {
 display: flex;
-padding:12px;
+padding: 12px;
 }
 
 #nav {
@@ -141,13 +141,14 @@ padding:12px;
   right:0px;
   bottom:45px;
   top:64px;
-  padding: 0 40px;
+  padding: 0 0 0 40px;
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: row;
 
 }
+
 
 .footer p {
   display: flex;
@@ -197,20 +198,53 @@ ul.pagination {
 }
 
 .book-menu {
-  flex: 1;
+  flex: 25%;
   font-size: $font-size-14;
   overflow-y: scroll;
 
 
   nav {
     padding: $padding-16;
+
+    h3 {
+      a {
+        color:$hot-red;
+      }
+    }
   }
 
   @include dark-links;
+
+  a.active {
+    font-weight: 600;
+    color: $hot-red;
+  }
+}
+
+.pdf-download-link {
+  display:flex;
+  margin-left:auto;
+}
+
+.pdf-download-icon {
+  background-image: url('/svg/download.svg');
+  background-repeat: no-repeat;
+  height:20px;
+  width:20px;
+  margin-left:10px;
+}
+
+.language-select {
+  margin: 15px 15px 15px auto;
+}
+
+.markdown-header {
+  display:flex;
+  align-items: center;
 }
 
 .book-page {
-  flex: 3;
+  flex: 75%;
   padding: $padding-16;
   overflow-y: scroll; 
 }
@@ -257,6 +291,22 @@ ul.pagination {
   }
 }
 
+.github-link {
+
+  display: -webkit-flex; /* Safari */  
+  display: flex;
+  -webkit-align-items: center; /* Safari 7.0+ */
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  svg {
+    padding: 0 0 0 10px;
+    height: 18px;
+  }
+
+}
+
 // Responsive styles
 aside nav,
 .book-page,
@@ -276,6 +326,10 @@ aside nav,
 @media screen and (max-width: $sm-breakpoint) {
   .book-menu {
     margin-left: -$menu-width;
+  }
+
+  .markdown-header {
+    display:none;
   }
 
   .book-header {
