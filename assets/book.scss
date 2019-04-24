@@ -221,24 +221,56 @@ ul.pagination {
   }
 }
 
+.nav-pdf-download {
+  display:flex;
+  align-items: center;
+}
+
+.nav-guide-link {
+  display:flex;
+  align-items: center;
+}
+
+.guide-active {
+  border-bottom: 2px solid $hot-red;
+
+
+}
+.guide-active:hover, .guide-active:active, .guide-active:focus {
+  border-bottom: 2px solid tint($hot-red, 75%);
+}
+
+
+
 .pdf-download-link {
   display:flex;
   margin-left:auto;
 }
 
 .pdf-download-icon {
-  background-image: url('/svg/download.svg');
+  background-image: url('/svg/download-red.svg');
   background-repeat: no-repeat;
   height:20px;
   width:20px;
   margin-left:10px;
 }
 
-.language-select {
+.nav-right {
   margin: 15px 15px 15px auto;
 }
 
-.markdown-header {
+.hr-v {
+  width: 1px;
+  margin: 0 15px;
+  min-height: 100%;
+  background-color: #E1E0E0;
+} 
+
+.language-select {
+  margin: 15px;
+}
+
+.markdown__header {
   display:flex;
   align-items: center;
 }
