@@ -147,7 +147,6 @@ padding: 12px;
   right:0px;
   bottom:45px;
   top:64px;
-  padding: 0 0 0 40px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -204,7 +203,7 @@ ul.pagination {
 }
 
 .book-menu {
-  flex: 25%;
+  flex: 20%;
   font-size: $font-size-14;
   overflow-y: scroll;
 
@@ -282,7 +281,7 @@ ul.pagination {
 }
 
 .book-page {
-  flex: 75%;
+  flex: 60%;
   padding: $padding-16;
   overflow-y: scroll; 
 }
@@ -293,7 +292,7 @@ ul.pagination {
 }
 
 .book-toc {
-  flex: 1;
+  flex: 20%;
   font-size: $font-size-12;
 
   nav {
