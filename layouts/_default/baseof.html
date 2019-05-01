@@ -16,7 +16,7 @@
       </a>
       <a class="nav-guide-link {{ if ne .Path "_index.md" }}guide-active{{ end }}" href="{{(index .Site.Pages 1).Permalink}}" >Guide</a>
       <div class="hr-v"></div>
-      <a class="nav-pdf-download" href="/pdfs/full-site.pdf">Download PDF &nbsp;
+      <a class="nav-pdf-download" href="/pdfs/{{ replace .Site.Title " " "_" }}.pdf">Download PDF &nbsp;
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
         <g fill="none" fill-rule="evenodd" transform="translate(-4 -2)">
           <polygon points="0 0 20 0 20 20 0 20"/>
