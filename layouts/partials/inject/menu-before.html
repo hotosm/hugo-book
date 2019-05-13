@@ -1,0 +1,7 @@
+
+
+{{ .Scratch.Set "Title" "Introduction" }}
+{{ if .Site.Home.Title }}
+	{{ .Scratch.Set "Title" .Site.Home.Title}}
+{{ end }}
+<a href="/{{ .Site.LanguagePrefix }}" {{ if eq .Site.Home.Permalink .Permalink }} class="active"{{ end }}>{{ .Scratch.Get "Title" }}</a>  
