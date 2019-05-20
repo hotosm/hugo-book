@@ -54,7 +54,7 @@
                 var anchor = document.createElement('a');
                 var id = refs[i].ref
                 let doc = documents.find(o => o.id == id);
-                anchor.href = doc.path;
+                anchor.href = baseURL.slice(0,-1) + doc.path;
                 anchor.innerText = doc.title;
                 li.appendChild(anchor);
                 frag.appendChild(li);
