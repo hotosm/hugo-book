@@ -6,11 +6,17 @@
 <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
 <script src="https://unpkg.com/lunr/lunr.js"></script>
+{{ $scratch := newScratch }}
+{{ $scratch.Add "lunr-langs" (slice "da" "de" "es" "fi" "fr" "hu" "it" "ja" "jp" "nl" "no" "pt" "ro" "ru" "sv" "th" "tr") }}
+{{ if in ($scratch.Get "lunr-langs") .Site.Language.Lang }}
+<script src="/js/vendor/lunr.stemmer.support.js"></script>
+<script src="/js/vendor/lunr.{{ .Site.Language.Lang }}.js"></script>
+{{ end }}
 <link rel="stylesheet" href="{{ "normalize.min.css" | relURL }}">
 {{ $styles := resources.Get "book.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 
 {{ "<!--" | safeHTML }}
 Made with Book Theme
-https://github.com/alex-shpak/hugo-book
+https://github.com/hotosm/hugo-book
 {{ "-->" | safeHTML }}

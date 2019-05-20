@@ -39,27 +39,27 @@
     function onInput(e) {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-        searchResults.classList.remove('search-results--visible');
-        while (searchResultsList.firstChild) {
-            searchResultsList.removeChild(searchResultsList.firstChild);
-        }
-        if (e.target.value.length > 3) {
-            const refs = idx.search(searchInput.value);
-            if (refs.length > 0 ) {
-                searchResults.classList.add('search-results--visible');
+            searchResults.classList.remove('search-results--visible');
+            while (searchResultsList.firstChild) {
+                searchResultsList.removeChild(searchResultsList.firstChild);
             }
-            var frag = document.createDocumentFragment();
-            for (var i = 0; i < refs.length; i++ ) {
-                var li  = document.createElement('li');
-                var anchor = document.createElement('a');
-                var id = refs[i].ref
-                let doc = documents.find(o => o.id == id);
-                anchor.href = baseURL.slice(0,-1) + doc.path;
-                anchor.innerText = doc.title;
-                li.appendChild(anchor);
-                frag.appendChild(li);
-            }
-            searchResultsList.appendChild(frag);
+            if (e.target.value.length > 3) {
+                const refs = idx.search(searchInput.value);
+                if (refs.length > 0 ) {
+                    searchResults.classList.add('search-results--visible');
+                }
+                var frag = document.createDocumentFragment();
+                for (var i = 0; i < refs.length; i++ ) {
+                    var li  = document.createElement('li');
+                    var anchor = document.createElement('a');
+                    var id = refs[i].ref
+                    let doc = documents.find(o => o.id == id);
+                    anchor.href = baseURL.slice(0,-1) + doc.path;
+                    anchor.innerText = doc.title;
+                    li.appendChild(anchor);
+                    frag.appendChild(li);
+                }
+                searchResultsList.appendChild(frag);
         }
     }, 300)
 }
