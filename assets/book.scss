@@ -264,6 +264,54 @@ ul.pagination {
 }
 
 
+.search-input {
+  line-height: 1.5rem;
+  min-width:250px;
+  background: #0000;
+  padding: 5px 6px 6px;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 1px solid #E1E0E0;
+  font-size: 1rem;
+  color: #2C3038;
+  box-shadow: none;
+  background-image: url('/svg/icon-search.svg');
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: right 14px center;
+}
+
+
+.results-list {
+  list-style: none;
+  line-height: 1.5rem;
+  padding: 0 10px;
+
+}
+
+.search-results {
+  width: 500px;
+  max-height:50vh;
+  overflow-y: scroll; 
+  background-color:white;
+  position: fixed;
+  right: 0;
+  padding: 0;
+  margin-right: 16px;
+  top: 66px;
+
+
+
+  &--visible {
+    background-color: #FFEDED;
+
+    border-radius: 2px;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+    z-index: 999999;
+  }
+  
+}
+
 
 .pdf-download-link {
   display:flex;

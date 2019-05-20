@@ -24,13 +24,19 @@
         </g>
       </svg>
       </a>
-      <input type="checkbox" style="display: none" id="menu-control" />
-      <!-->div class="search-icon"></div>
-      <input type="text" name="search" id="search-input"-->
-      
+      <input type="checkbox" style="display: none" id="menu-control" />      
     </div>
     <div class="nav-right">
+    {{ $scratch := newScratch }}
+    {{ $scratch.Add "lunr-langs" (slice "da" "de" "en" "es" "fi" "fr" "hu" "it" "ja" "jp" "nl" "no" "pt" "ro" "ru" "sv" "th" "tr") }}
+    {{ if in ($scratch.Get "lunr-langs") .Site.Language.Lang }}
+    <div> <label for="search"></label> <input type="text" name="search" class="search-input" placeholder="Search…"></div>
+    <div class="search-results">
+      <ul class="results-list"></ul>
+    </div>
+    {{ end }}
     {{ if .Site.IsMultiLingual }}
+    <div class="hr-v"></div>
     <div class="language-select">Language: {{ .Site.LanguagePrefix }}</div>
     {{ end }}
     <div class="hr-v"></div>
@@ -56,7 +62,7 @@
   {{ template "_internal/google_analytics_async.html" . }}
   <footer class="footer">
 
-    <p>Humanitarian OpenStreetMap Team is a 501(c)(3) not-for-profit organization and global community. Learn more about  <a href="https://www.openstreetmap.org/about">OpenStreetMap</a>.</p>
+    <p>Humanitarian OpenStreetMap Team is a 501(c)(3) not-for-profit organization and global community. Learn more about &nbsp;<a href="https://www.openstreetmap.org/about">OpenStreetMap</a>.</p>
     <!-->a href="https://hotosm.org">
       <img class="logo footer-logo" src="{{ .Site.BaseURL }}/svg/hot-logo-icon-red.svg" alt="humanitarian openstreetmap team logo">
     </a-->
@@ -66,7 +72,7 @@
     {{ end }}
 
   </footer>
-  
+  <script src="/js/search.js"></script>
 </body>
 
 </html>
