@@ -7,7 +7,16 @@
     var timeout;
     var documents;
     searchInput.disabled = true;
-    fetch('./lunr-documents.json')
+    var url = window.location.href;
+    var baseURL;
+    if (url.indexOf('pages') != -1) {
+        baseURL = url.split('pages')[0]
+    } else {
+        baseURL = url;
+    }
+
+
+    fetch(baseURL + 'lunr-documents.json')
     .then(response => {
         return response.json();
       })
@@ -15,7 +24,7 @@
         documents = docs;
       })
       .then(()=> {
-        fetch('./lunr-index.json')
+        fetch(baseURL + 'lunr-index.json')
         .then(response => {
           return response.json();
         })
