@@ -275,7 +275,7 @@ ul.pagination {
   font-size: 1rem;
   color: #2C3038;
   box-shadow: none;
-  background-image: url('/svg/icon-search.svg');
+  background-image: url('./svg/icon-search.svg');
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: right 14px center;
@@ -312,14 +312,13 @@ ul.pagination {
   
 }
 
-
 .pdf-download-link {
   display:flex;
   margin-left:auto;
 }
 
 .pdf-download-icon {
-  background-image: url('/svg/download-red.svg');
+  background-image: url('./svg/download-red.svg');
   background-repeat: no-repeat;
   height:20px;
   width:20px;

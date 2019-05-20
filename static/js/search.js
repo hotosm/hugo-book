@@ -7,7 +7,7 @@
     var timeout;
     var documents;
     searchInput.disabled = true;
-    fetch('/lunr-documents.json')
+    fetch('./lunr-documents.json')
     .then(response => {
         return response.json();
       })
@@ -15,7 +15,7 @@
         documents = docs;
       })
       .then(()=> {
-        fetch('/lunr-index.json')
+        fetch('./lunr-index.json')
         .then(response => {
           return response.json();
         })
