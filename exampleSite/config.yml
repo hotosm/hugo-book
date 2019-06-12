@@ -4,6 +4,7 @@ baseURL: https://example.com/
 title: Hugo Book
 theme: hugo-book
 disableKinds: ["taxonomy", "taxonomyTerm"]
+# matomoSiteID: 16
 # themesDir: ../..
 
 # Book configuration
