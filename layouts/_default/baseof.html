@@ -72,6 +72,12 @@
   {{ if in ($scratch.Get "lunr-langs") .Site.Language.Lang }}
   <script src="/js/search.js"></script>
   {{ end }}
+
+  {{ if .Site.params.matomoSiteID }}
+  <div id="optout-form" ></div>
+  <script type="application/javascript">var site_id = "{{ .Site.params.matomoSiteID }}"</script>
+  <script type="application/javascript" src="https://cdn.hotosm.org/tracking-v3.js"></script>
+  {{ end }}
 </body>
 
 </html>
