@@ -35,9 +35,23 @@
       <ul class="results-list"></ul>
     </div>
     {{ end }}
+    {{ $page := .Page.RelPermalink }}
+
     {{ if .Site.IsMultiLingual }}
     <div class="hr-v"></div>
-    <div class="language-select">Language: {{ .Site.LanguagePrefix }}</div>
+    <div class="language">
+      <button class="language-btn">Language: {{ .Site.Language.Lang }}</button>
+      <div class="language-dropdown">
+          {{ range .Site.Languages }}
+        <a href="/{{.Lang}}">{{ .LanguageName }}</a>
+         {{ end }}
+      </div>
+    </div>
+    
+
+    <div class="language-select"></div>
+    <div class="languages">
+    </div>
     {{ end }}
     <div class="hr-v"></div>
     <a href="https://hotosm.org" class="hotosm-link">hotosm.org <img src="/svg/icon-external-red.svg" alt=""></a>

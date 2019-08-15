@@ -286,7 +286,6 @@ ul.pagination {
   list-style: none;
   line-height: 1.5rem;
   padding: 0 10px;
-
 }
 
 .search-results {
@@ -304,7 +303,6 @@ ul.pagination {
 
   &--visible {
     background-color: #FFEDED;
-
     border-radius: 2px;
     box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
     z-index: 999999;
@@ -337,9 +335,44 @@ ul.pagination {
   background-color: #E1E0E0;
 } 
 
-.language-select {
+
+.language-btn {
+
+  color: $hot-red;
   margin: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
+
+.language {
+  position: relative;
+  display: block;
+}
+
+.language-dropdown {
+  display: none;
+  position: fixed;
+  background-color: #FFEDED;
+
+
+  width: 120px;
+  padding: 0 18px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999999;
+}
+
+.language-dropdown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.language:hover .language-dropdown {
+  display: block;
+}
+
 
 .markdown__header {
   display:flex;
