@@ -3,9 +3,9 @@
   <div class="markdown__header">  <h1>{{ .Page.Title }}</h1>
     <a 
     {{ if .Site.IsMultiLingual }}
-    href="/pdfs/{{.Site.Language.Lang}}/{{ .File.TranslationBaseName }}.pdf">
+    href="/pdfs/{{.Site.Language.Lang}}/{{ .File.TranslationBaseName }}.pdf"
     {{ else }}
-    href="/pdfs/{{ .File.TranslationBaseName }}.pdf">
+    href="/pdfs/{{ .File.TranslationBaseName }}.pdf"
     {{ end }}
     class="pdf-download-link"> Download page as PDF &nbsp;
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
